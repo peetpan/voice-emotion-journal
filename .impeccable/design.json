@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-27T17:25:41+00:00",
+  "title": "Design System: Voice Emotion Journal",
+  "extensions": {
+    "colorMeta": {
+      "stage": {
+        "role": "neutral",
+        "displayName": "Stage",
+        "canonical": "oklch(17.8% 0.011 268)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232427",
+          "#3e4044",
+          "#5b5d63",
+          "#7a7d84",
+          "#9c9ea4",
+          "#c2c4c9",
+          "#edeef2"
+        ]
+      },
+      "stage-deep": {
+        "role": "neutral",
+        "displayName": "Stage Deep",
+        "canonical": "oklch(15.4% 0.009 264)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232427",
+          "#3e4044",
+          "#5b5e62",
+          "#7b7d83",
+          "#9c9ea3",
+          "#c2c4c8",
+          "#edeef2"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "oklch(23.9% 0.018 266)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21242a",
+          "#3c4047",
+          "#595e67",
+          "#787d88",
+          "#9a9ea8",
+          "#c0c4cc",
+          "#eceef5"
+        ]
+      },
+      "panel-up": {
+        "role": "neutral",
+        "displayName": "Panel Up",
+        "canonical": "oklch(28.5% 0.021 266)",
+        "tonalRamp": [
+          "#090b10",
+          "#21242b",
+          "#3c4049",
+          "#585e69",
+          "#777d8a",
+          "#999eaa",
+          "#c0c4ce",
+          "#ebeef6"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "oklch(30.5% 0.021 266)",
+        "tonalRamp": [
+          "#090b10",
+          "#21242b",
+          "#3c4049",
+          "#585e69",
+          "#787d8a",
+          "#999ea9",
+          "#c0c4cd",
+          "#ebeef6"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(95.4% 0.005 258)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#3f4042",
+          "#5c5e60",
+          "#7c7d80",
+          "#9d9ea1",
+          "#c3c4c6",
+          "#edeef0"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(73.6% 0.019 261)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21242a",
+          "#3b4048",
+          "#585e68",
+          "#777e88",
+          "#999fa8",
+          "#c0c4cc",
+          "#ebeff5"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "oklch(60.9% 0.023 264)",
+        "tonalRamp": [
+          "#090b10",
+          "#21242b",
+          "#3b4049",
+          "#585e6a",
+          "#777d8b",
+          "#999faa",
+          "#bfc4ce",
+          "#ebeff6"
+        ]
+      },
+      "gel-open": {
+        "role": "primary",
+        "displayName": "Open White",
+        "canonical": "oklch(92.7% 0.028 87)",
+        "tonalRamp": [
+          "#0e0b05",
+          "#28241a",
+          "#453f33",
+          "#645d4d",
+          "#847d6b",
+          "#a59e8f",
+          "#c9c4b7",
+          "#f2eee4"
+        ]
+      },
+      "gel-straw": {
+        "role": "primary",
+        "displayName": "Straw",
+        "canonical": "oklch(83.5% 0.077 95)",
+        "tonalRamp": [
+          "#100b00",
+          "#2b2404",
+          "#493f17",
+          "#6a5d2c",
+          "#8b7d49",
+          "#aa9f72",
+          "#cec49f",
+          "#f6efd3"
+        ]
+      },
+      "gel-sea": {
+        "role": "secondary",
+        "displayName": "Sea Green",
+        "canonical": "oklch(70.3% 0.096 173)",
+        "tonalRamp": [
+          "#001109",
+          "#002d21",
+          "#004c3c",
+          "#0f6d59",
+          "#378f78",
+          "#68af9a",
+          "#9ad2c0",
+          "#cff9ec"
+        ]
+      },
+      "gel-amber": {
+        "role": "secondary",
+        "displayName": "Amber",
+        "canonical": "oklch(79.8% 0.144 85)",
+        "tonalRamp": [
+          "#180600",
+          "#371e00",
+          "#5a3800",
+          "#7f5500",
+          "#a27500",
+          "#bf983e",
+          "#e0c07b",
+          "#ffecb9"
+        ]
+      },
+      "gel-steel": {
+        "role": "secondary",
+        "displayName": "Steel Blue",
+        "canonical": "oklch(59.9% 0.152 257)",
+        "tonalRamp": [
+          "#000729",
+          "#002151",
+          "#0e3d7c",
+          "#235caa",
+          "#407dd2",
+          "#6ca0ea",
+          "#9bc6ff",
+          "#cff1ff"
+        ]
+      },
+      "gel-violet": {
+        "role": "secondary",
+        "displayName": "Violet",
+        "canonical": "oklch(62.8% 0.159 294)",
+        "tonalRamp": [
+          "#0f0128",
+          "#28154e",
+          "#452e79",
+          "#6448a6",
+          "#8368cd",
+          "#a38ee6",
+          "#c7b7ff",
+          "#f0e5ff"
+        ]
+      },
+      "gel-rose": {
+        "role": "secondary",
+        "displayName": "Rose",
+        "canonical": "oklch(61.2% 0.181 10)",
+        "tonalRamp": [
+          "#250004",
+          "#4c0017",
+          "#770a2e",
+          "#a52347",
+          "#ce4665",
+          "#ea7489",
+          "#ffa3b2",
+          "#ffd6e0"
+        ]
+      },
+      "live": {
+        "role": "tertiary",
+        "displayName": "Cue Light",
+        "canonical": "oklch(66.9% 0.149 10)",
+        "tonalRamp": [
+          "#210005",
+          "#470619",
+          "#6f1d31",
+          "#9a354b",
+          "#c25469",
+          "#de7d8d",
+          "#fcaab5",
+          "#ffdbe3"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Discard Red",
+        "canonical": "oklch(67.6% 0.150 12)",
+        "tonalRamp": [
+          "#210004",
+          "#470618",
+          "#6f1d30",
+          "#9b3449",
+          "#c25467",
+          "#df7d8b",
+          "#fdaab4",
+          "#ffdbe2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Prompt, first-read sentence, state headlines."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Recording timer, tabular numerals."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Date, button labels, New badge."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Swatch names, pill and quiet buttons, state chip."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Status, notes, transcript (65ch)."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All UI and stage transitions."
+      },
+      {
+        "name": "control",
+        "value": "160ms",
+        "purpose": "Button, pill and quiet hover colour."
+      },
+      {
+        "name": "press",
+        "value": "120ms scale(0.98)",
+        "purpose": "Button press feedback."
+      },
+      {
+        "name": "mark-fade",
+        "value": "600ms",
+        "purpose": "Spike tape fades out when the stage is lit."
+      },
+      {
+        "name": "light-settle",
+        "value": "700ms",
+        "purpose": "Beam and pool easing outside live recording (live: no transition, per-frame)."
+      },
+      {
+        "name": "gel-resolve",
+        "value": "1200ms transform, 900ms opacity, 90ms stagger",
+        "purpose": "Gels move from the pool centre to their fixed slots after saving."
+      },
+      {
+        "name": "breathe",
+        "value": "2.8s ease-in-out alternate, opacity 0.18-0.42",
+        "purpose": "Pool while listening back."
+      },
+      {
+        "name": "pulse",
+        "value": "1.8s ease-in-out",
+        "purpose": "Live dot while recording."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "short-result",
+        "value": "max-height: 740px",
+        "purpose": "Result phase scrolls (height auto, min 100dvh); rig box fixed at 220px. Taller viewports stay locked to 100dvh."
+      },
+      {
+        "name": "compact",
+        "value": "max-height: 700px",
+        "purpose": "Tighter lead and stage spacing; collapsed transcript clamps to 2 lines."
+      },
+      {
+        "name": "desktop",
+        "value": "min-width: 600px and min-height: 860px",
+        "purpose": "Stage row fixed at 440px; column centred vertically."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Primary action (Start recording, Done, Try again); always the light fill in the bottom thumb row.",
+      "html": "<button class=\"ds-btn-light\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z\"/><path d=\"M19 10v2a7 7 0 0 1-14 0v-2\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/></svg> Start recording</button>",
+      "css": ".ds-btn-light{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 16px;border:0;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;transition:background-color 160ms cubic-bezier(0.16,1,0.3,1),transform 120ms cubic-bezier(0.16,1,0.3,1);width:320px;background:var(--ink,#eef0f3);color:var(--stage,#0f1116);} .ds-btn-light:hover{background:#ffffff;} .ds-btn-light:active{transform:scale(0.98);} .ds-btn-light:focus-visible{outline:2px solid var(--gel-straw,#d8c98f);outline-offset:3px;}"
+    },
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Secondary action beside the light button (Pause, Resume, Record another).",
+      "html": "<button class=\"ds-btn-dark\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"14\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/><rect x=\"6\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/></svg> Pause</button>",
+      "css": ".ds-btn-dark{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 16px;border:0;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;transition:background-color 160ms cubic-bezier(0.16,1,0.3,1),transform 120ms cubic-bezier(0.16,1,0.3,1);width:160px;background:var(--panel-up,#252a35);color:var(--ink,#eef0f3);} .ds-btn-dark:hover{background:#2f3542;} .ds-btn-dark:active{transform:scale(0.98);} .ds-btn-dark:focus-visible{outline:2px solid var(--gel-straw,#d8c98f);outline-offset:3px;}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Only inside the discard confirmation.",
+      "html": "<button class=\"ds-btn-danger\">Discard</button>",
+      "css": ".ds-btn-danger{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 16px;border:0;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;transition:background-color 160ms cubic-bezier(0.16,1,0.3,1),transform 120ms cubic-bezier(0.16,1,0.3,1);width:160px;background:var(--danger,#e36b7f);color:var(--stage-deep,#0a0c10);} .ds-btn-danger:active{transform:scale(0.98);} .ds-btn-danger:focus-visible{outline:2px solid var(--gel-straw,#d8c98f);outline-offset:3px;}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Text-only tertiary action (Another, Hide prompt, Read the transcript).",
+      "html": "<button class=\"ds-btn-quiet\">Read the transcript</button>",
+      "css": ".ds-btn-quiet{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0;border:0;background:none;color:var(--ink-soft,#a3aab6);font-size:15px;font-weight:600;cursor:pointer;transition:color 160ms cubic-bezier(0.16,1,0.3,1);} .ds-btn-quiet:hover{color:var(--ink,#eef0f3);} .ds-btn-quiet:focus-visible{outline:2px solid var(--gel-straw,#d8c98f);outline-offset:3px;}"
+    },
+    {
+      "name": "Timeline Pill",
+      "kind": "nav",
+      "refersTo": "pill-link",
+      "description": "The single navigation link, top-right of the top bar.",
+      "html": "<a class=\"ds-pill\" href=\"#\">Timeline</a>",
+      "css": ".ds-pill{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid var(--rule,#2a2f3a);border-radius:999px;color:var(--ink,#eef0f3);font-size:15px;font-weight:600;text-decoration:none;transition:background-color 160ms cubic-bezier(0.16,1,0.3,1),border-color 160ms cubic-bezier(0.16,1,0.3,1);} .ds-pill:hover{background:var(--panel,#1b1f28);border-color:var(--panel-up,#252a35);} .ds-pill:focus-visible{outline:2px solid var(--gel-straw,#d8c98f);outline-offset:3px;}"
+    },
+    {
+      "name": "Swatch Tags",
+      "kind": "chip",
+      "refersTo": "swatch-tag",
+      "description": "Labelled gel legend at the foot of the stage: chip, emotion name, soft confidence word.",
+      "html": "<ul class=\"ds-swatches\"><li><span class=\"ds-chip\" style=\"background:var(--gel-sea,#57b39a)\"></span><span class=\"ds-name\">Calm</span><span class=\"ds-word\">clear</span></li><li><span class=\"ds-chip\" style=\"background:var(--gel-straw,#d8c98f)\"></span><span class=\"ds-name\">Tiredness</span><span class=\"ds-word\">a little</span></li><li><span class=\"ds-chip\" style=\"background:var(--gel-violet,#8f72de)\"></span><span class=\"ds-name\">Worry</span><span class=\"ds-word\">faint</span></li></ul>",
+      "css": ".ds-swatches{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none;font-size:15px;} .ds-swatches li{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 10px;border-radius:8px;background:var(--panel,#1b1f28);color:var(--ink,#eef0f3);} .ds-chip{width:12px;height:12px;border-radius:3px;} .ds-name{font-weight:600;} .ds-word{color:var(--ink-soft,#a3aab6);}"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "status-badge",
+      "description": "\"New\" beside the first reading until it is opened.",
+      "html": "<span class=\"ds-badge\">New</span>",
+      "css": ".ds-badge{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;display:inline-block;padding:1px 8px;border-radius:6px;background:color-mix(in srgb,var(--gel-straw,#d8c98f) 18%,var(--panel,#1b1f28));color:var(--gel-straw,#d8c98f);font-size:15px;font-weight:700;line-height:1.5;letter-spacing:0.01em;}"
+    },
+    {
+      "name": "Clock and Track",
+      "kind": "custom",
+      "refersTo": "progress-track",
+      "description": "Timer, soft 3-minute guide, and straw progress track with the guide tick.",
+      "html": "<div class=\"ds-clock\"><div class=\"ds-clock-row\"><span class=\"ds-time\">1:12</span><span class=\"ds-guide\">about 3 min</span></div><div class=\"ds-track\"><i style=\"width:24%\"></i><b style=\"left:60%\"></b></div></div>",
+      "css": ".ds-clock{font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;width:340px;color:var(--ink,#eef0f3);font-size:15px;} .ds-clock-row{display:flex;align-items:baseline;justify-content:space-between;} .ds-time{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.01em;} .ds-guide{color:var(--ink-soft,#a3aab6);} .ds-track{position:relative;height:4px;margin-top:10px;border-radius:2px;background:var(--rule,#2a2f3a);} .ds-track i{display:block;height:100%;border-radius:2px;background:var(--gel-straw,#d8c98f);} .ds-track b{position:absolute;top:-4px;width:2px;height:12px;border-radius:1px;background:var(--ink-faint,#7c8391);}"
+    },
+    {
+      "name": "Lighting Rig",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature stage: straw spike tape (centre cross + two T-marks on the floor line) while unlit; open-white beam and floor pool driven by voice level; resolves into labelled translucent gels after saving.",
+      "html": "<div class=\"ds-rig\"><svg class=\"ds-mark\" viewBox=\"0 0 100 100\" preserveAspectRatio=\"none\"><path d=\"M47.5 68h5M50 65.5v5\" vector-effect=\"non-scaling-stroke\"/><path d=\"M15 68h5M17.5 68v3\" vector-effect=\"non-scaling-stroke\"/><path d=\"M80 68h5M82.5 68v3\" vector-effect=\"non-scaling-stroke\"/></svg></div><div class=\"ds-rig\"><div class=\"ds-beam\"></div><div class=\"ds-pool\"></div></div><div class=\"ds-rig\"><div class=\"ds-gel\" style=\"--g:var(--gel-sea,#57b39a);left:44%;top:46%;width:66%;height:66%;opacity:.74\"></div><div class=\"ds-gel\" style=\"--g:var(--gel-straw,#d8c98f);left:64%;top:38%;width:50%;height:50%;opacity:.6\"></div><div class=\"ds-gel\" style=\"--g:var(--gel-violet,#8f72de);left:58%;top:64%;width:40%;height:40%;opacity:.5\"></div></div>",
+      "css": ".ds-rig{position:relative;display:inline-block;width:200px;height:200px;margin:4px;background:var(--stage,#0f1116);overflow:hidden;isolation:isolate;} .ds-mark{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke:var(--gel-straw,#d8c98f);stroke-opacity:.5;stroke-width:2;stroke-linecap:round;transition:opacity 600ms cubic-bezier(0.16,1,0.3,1);} .ds-beam{position:absolute;left:50%;top:-8%;width:84%;height:76%;transform:translateX(-50%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);background:linear-gradient(to bottom,rgb(255 238 200/0),rgb(255 238 200/.16) 70%,rgb(255 238 200/.05));opacity:.7;mix-blend-mode:screen;} .ds-pool{position:absolute;left:50%;top:68%;width:84%;height:34%;border-radius:50%;mix-blend-mode:screen;background:radial-gradient(closest-side,rgb(255 244 218) 0,rgb(246 226 180/.82) 34%,rgb(216 201 143/.34) 68%,rgb(216 201 143/0) 100%);opacity:.7;transform:translate(-50%,-50%) scale(.9);} .ds-gel{position:absolute;border-radius:50%;mix-blend-mode:screen;background:radial-gradient(closest-side,var(--g) 0 88%,transparent 100%);transform:translate(-50%,-50%);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Lighting Gels",
+    "overview": "A theatre lighting gel swatch book laid out on a dark stage. The screen is a blue-black theatre used in a dark bedroom at night; the only light on it is the user's own voice. While recording, a single open-white lamp throws a beam down onto the floor and its pool brightens and spreads with the voice. When the entry is saved, the light resolves into overlapping translucent gels, one per emotion, whose size and density carry confidence, each paired with a labelled swatch tag below the stage.\n\nThe system is quiet and low-energy by design: two type sizes ranked by weight, panels only one step lighter than the ground, large rounded thumb-reach buttons where the light button is always the primary action. Colour is reserved for meaning. The six named gels plus Open white are the only chromatic values on screen, and a gel never appears without its name.\n\nDepth comes from light, not from shadow. Beam, pool and gels are additive (screen-blended) light on black; surfaces are flat tonal steps.",
+    "keyCharacteristics": [
+      "Dark stage ground (stage) with flat panels one step up; no shadows anywhere.",
+      "A fixed gel set mapped one-to-one to emotions, always labelled with name + soft word.",
+      "Voice level is the only live driver of the stage; everything else is still.",
+      "Hanken Grotesk at two working sizes (15px and 24px), hierarchy by weight.",
+      "56px rounded buttons in the bottom thumb zone; light = primary, dark = secondary."
+    ],
+    "rules": [
+      {
+        "name": "The Labelled Gel Rule",
+        "body": "A gel colour never appears without its swatch tag naming the emotion and a soft confidence word. Colour is never the only carrier of meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gels Mean Feelings Rule",
+        "body": "The six gel colours are reserved for emotions (Straw also carries the interface accent). Don't use a gel as decoration, a brand colour, or a category colour for anything else.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Lamp Rule",
+        "body": "While recording, the stage holds one open-white lamp only. Gel colour appears on the stage only after the entry has been read.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Sizes Rule",
+        "body": "The working sizes are 15px and 24px. Rank by weight and ink tone, not by adding sizes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Soft Words Rule",
+        "body": "Confidence is spoken, never numbered. Swatch tags use \"strong\", \"clear\", \"a little\", \"faint\"; the reading sentence uses \"mostly\", \"a little\", \"some\", \"a trace of\". No percentages, scores or bars for emotion.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Not Shadow Rule",
+        "body": "Depth is light added to the stage, never shadow cast beneath a surface.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Voice Drives Light Rule",
+        "body": "Beam opacity and pool size/brightness follow the live voice level and nothing else. Unlit (idle, which includes failed and denied) shows only the spike tape on the floor; paused dims the pool to 0.12; listening-back breathes the pool slowly (2.8s, 0.18–0.42 opacity).",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** pair every gel colour on screen with a swatch tag naming the emotion and a soft confidence word.",
+      "**Do** keep the primary action as the light button (ink fill) in the bottom row, 56px tall.",
+      "**Do** let the voice level be the only live driver of stage light; everything else on screen stays still while recording.",
+      "**Do** draw gels at the fixed rig scale and slot positions every night so nights compare by eye.",
+      "**Do** separate surfaces by tonal steps (stage, panel, panel-up) and keep them flat.",
+      "**Do** use Straw for focus rings (2px, 3px offset) and progress."
+    ],
+    "donts": [
+      "**Don't** show confidence as percentages, scores, bars or streaks.",
+      "**Don't** use a gel colour for anything other than its emotion (Straw excepted as the interface accent).",
+      "**Don't** add box-shadows, glow halos around controls, or decorative circles that aren't bound to the voice level or an emotion reading.",
+      "**Don't** use bright flashes or fast transitions on the stage; light changes ease over 600–1200ms outside live recording.",
+      "**Don't** add a third type size; rank by weight.",
+      "**Don't** introduce a red record button or a scrolling waveform; the lamp and pool are the recording feedback."
+    ]
+  }
+}

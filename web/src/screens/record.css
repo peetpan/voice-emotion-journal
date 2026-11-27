@@ -1,0 +1,572 @@
+.screen {
+  --top: max(env(safe-area-inset-top), 14px);
+  --bottom: max(env(safe-area-inset-bottom), 16px);
+  display: grid;
+  grid-template-rows: auto auto minmax(132px, 1fr) auto auto;
+  /* Fixed to the viewport so the controls stay in thumb reach; the stage gives way. */
+  height: 100dvh;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: calc(var(--top) + 10px) var(--gutter) calc(var(--bottom) + 12px);
+}
+
+/* A result on a short phone scrolls rather than squeezing the gels away. */
+@media (max-height: 740px) {
+  .screen[data-phase='result'] {
+    height: auto;
+    min-height: 100dvh;
+  }
+  .screen[data-phase='result'] .rig-wrap {
+    /* An auto-height page gives the flex child no definite size; set one so the rig can resolve. */
+    flex: 0 0 auto;
+    height: 220px;
+  }
+}
+
+/* A fully open transcript lets the page scroll too. */
+.screen[data-expanded='true'] {
+  height: auto;
+  min-height: 100dvh;
+  grid-template-rows: auto auto minmax(240px, 1fr) auto auto;
+}
+
+/* ---------- top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.date {
+  font-size: var(--size-body);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.status {
+  color: var(--ink-soft);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+.pill:hover {
+  background: var(--panel);
+  border-color: var(--panel-up);
+}
+
+/* ---------- lead: prompt, reading or state message ---------- */
+
+.lead {
+  padding-top: 28px;
+}
+[data-phase='ready'] .lead,
+[data-phase='requesting'] .lead,
+[data-phase='recording'] .lead {
+  min-height: 112px;
+}
+
+.lead-text {
+  font-size: var(--size-lead);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+  max-width: 22ch;
+}
+
+[data-phase='result'] .lead-text {
+  max-width: 24ch;
+}
+
+.sub {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  max-width: 36ch;
+  text-wrap: pretty;
+}
+
+.new {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 8px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--gel-straw) 18%, var(--panel));
+  color: var(--gel-straw);
+  font-size: var(--size-body);
+  font-weight: 700;
+  line-height: 1.5;
+  vertical-align: 0.2em;
+  letter-spacing: 0.01em;
+}
+
+.prompt-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 160ms var(--ease-out);
+}
+.quiet:hover {
+  color: var(--ink);
+}
+.quiet.center {
+  align-self: center;
+}
+
+/* ---------- stage ---------- */
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.rig-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 72px;
+  container-type: size;
+}
+
+/* Always square, at the largest size the stage allows: one fixed scale every night. */
+.rig {
+  --lvl: 0;
+  position: absolute;
+  inset: 0;
+  width: min(100cqw, 100cqh);
+  height: min(100cqw, 100cqh);
+  margin: auto;
+  container-type: size;
+}
+
+.gel {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/*
+ * One open-white lamp. The beam throws down from above the stage and lands
+ * as a pool on the floor; the voice drives its brightness and spread.
+ */
+.beam,
+.pool,
+.mark {
+  position: absolute;
+  pointer-events: none;
+}
+
+.beam {
+  left: 50%;
+  top: -8%;
+  width: 84%;
+  height: 76%;
+  transform: translateX(-50%);
+  clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%);
+  background: linear-gradient(to bottom, rgb(255 238 200 / 0), rgb(255 238 200 / 0.16) 70%, rgb(255 238 200 / 0.05));
+  opacity: calc(var(--lvl) * 1.1);
+  mix-blend-mode: screen;
+}
+
+.pool {
+  left: 50%;
+  top: 68%;
+  width: 84%;
+  height: 34%;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    closest-side,
+    rgb(255 244 218) 0,
+    rgb(246 226 180 / 0.82) 34%,
+    rgb(216 201 143 / 0.34) 68%,
+    rgb(216 201 143 / 0) 100%
+  );
+  opacity: calc(0.14 + var(--lvl) * 0.86);
+  transform: translate(-50%, -50%) scale(calc(0.62 + var(--lvl) * 0.46));
+}
+
+/* Spike tape: where the light will land. The unlit stage waiting for its cue. */
+.mark {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke: var(--gel-straw);
+  stroke-opacity: 0.5;
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+  transition: opacity 600ms var(--ease-out);
+}
+
+.beam,
+.pool {
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+
+.rig[data-mode='live'] .beam,
+.rig[data-mode='live'] .pool {
+  transition: none;
+}
+
+.rig[data-mode='idle'] .pool,
+.rig[data-mode='idle'] .beam {
+  opacity: 0;
+}
+
+.rig[data-mode='paused'] .beam {
+  opacity: 0;
+}
+.rig[data-mode='paused'] .pool {
+  opacity: 0.12;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.rig[data-mode='listening'] .beam {
+  opacity: 0;
+}
+.rig[data-mode='listening'] .pool {
+  transform: translate(-50%, -50%) scale(0.8);
+  animation: breathe 2.8s ease-in-out infinite alternate;
+}
+
+.rig[data-mode='live'] .mark,
+.rig[data-mode='listening'] .mark,
+.rig[data-mode='resolved'] .mark {
+  opacity: 0;
+}
+
+.rig[data-mode='resolved'] .pool,
+.rig[data-mode='resolved'] .beam {
+  opacity: 0;
+}
+
+@keyframes breathe {
+  from {
+    opacity: 0.18;
+  }
+  to {
+    opacity: 0.42;
+  }
+}
+
+.gel {
+  background: radial-gradient(closest-side, var(--gel) 0 88%, transparent 100%);
+  opacity: var(--density);
+  transform: translate(-50%, -50%);
+  transition: transform 1200ms var(--ease-out), opacity 900ms var(--ease-out);
+}
+
+.gel[data-settled='false'] {
+  opacity: 0;
+  transform: translate(calc(-50% + var(--from-x)), calc(-50% + var(--from-y))) scale(0.3);
+}
+
+.stage-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.kept {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--panel);
+}
+.kept span:last-child {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.state-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.state-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+}
+
+.state-chip[data-live='true'] .dot {
+  background: var(--live);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.note {
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.note.sample {
+  color: var(--ink-faint);
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.swatches li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 10px;
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.swatches .chip {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.swatches .name {
+  font-weight: 600;
+}
+
+.swatches .word {
+  color: var(--ink-soft);
+}
+
+/* ---------- clock ---------- */
+
+.clock {
+  padding-top: 18px;
+}
+
+.clock-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.time {
+  font-size: var(--size-lead);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.guide {
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.track {
+  position: relative;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: var(--rule);
+}
+
+.track i {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--gel-straw);
+}
+
+.track b {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 12px;
+  border-radius: 1px;
+  background: var(--ink-faint);
+}
+
+/* ---------- transcript ---------- */
+
+.transcript {
+  padding-top: 18px;
+}
+
+.transcript p {
+  color: var(--ink-soft);
+  max-width: 65ch;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.transcript p.open {
+  display: block;
+  color: var(--ink);
+}
+
+.transcript .muted {
+  display: block;
+}
+
+/* ---------- controls ---------- */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: var(--radius);
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 160ms var(--ease-out), transform 120ms var(--ease-out), opacity 160ms;
+}
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn.light {
+  background: var(--ink);
+  color: var(--stage);
+}
+.btn.light:hover:not(:disabled) {
+  background: #ffffff;
+}
+
+.btn.dark {
+  background: var(--panel-up);
+  color: var(--ink);
+}
+.btn.dark:hover:not(:disabled) {
+  background: #2f3542;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: var(--stage-deep);
+}
+
+.btn.wide {
+  width: 100%;
+}
+
+.confirm p {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.hint {
+  color: var(--ink-soft);
+  text-align: center;
+  min-height: 56px;
+  display: grid;
+  place-items: center;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beam,
+  .pool,
+  .gel,
+  .btn,
+  .pill,
+  .quiet {
+    transition: none;
+  }
+  .rig[data-mode='listening'] .pool {
+    animation: none;
+    opacity: 0.3;
+  }
+  .state-chip[data-live='true'] .dot {
+    animation: none;
+  }
+}
+
+@media (max-height: 700px) {
+  .lead {
+    padding-top: 18px;
+    min-height: 0;
+  }
+  .stage {
+    margin-top: 12px;
+  }
+  .transcript p:not(.open) {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .btn {
+    padding: 0 12px;
+  }
+}
+
+/* Desktop windows: hold the phone-shaped column at a comfortable size, centred. */
+@media (min-width: 600px) and (min-height: 860px) {
+  .screen {
+    grid-template-rows: auto auto 440px auto auto;
+    align-content: center;
+  }
+}
